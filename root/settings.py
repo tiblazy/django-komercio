@@ -42,6 +42,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     'rest_framework', 
     'rest_framework.authtoken',
+    'drf_spectacular',
 ]
 
 MY_APPS = [
@@ -147,4 +148,15 @@ REST_FRAMEWORK = {
 
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 2,
+    
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+# Spectacular Config
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Komercio API',
+    'DESCRIPTION': 'Desenvolvida com intuito de usuários conseguirem comprar e vender seus produtos',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
 }

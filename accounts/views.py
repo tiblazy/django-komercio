@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, hashers
 
 from rest_framework.views import Response, status
 from rest_framework.generics import ListCreateAPIView, ListAPIView, UpdateAPIView
@@ -32,14 +32,28 @@ class AccountUpdateView(UpdateAPIView):
     lookup_url_kwarg = 'pk'    
     
     def perform_update(self, serializer):
-        return serializer.save(data=self.request, is_active=True)
-                
+        password = self.get_object().password
+
+        if 'password' in self.request.data.keys():
+            password = hashers.make_password(self.request.data['password'])
+
+        return serializer.save(data=self.request, password=password)                
 class ManagerView(UpdateAPIView):
     queryset = Account.objects.all()
     serializer_class = AccountSerializer
     permission_classes = [IsAdminUser]
     lookup_field = 'id'
     lookup_url_kwarg = 'pk'    
+
+    def perform_update(self, serializer):
+        password = self.get_object().password
+
+        if 'password' in self.request.data.keys():
+            password = hashers.make_password(self.request.data['password'])
+
+        return serializer.save(data=self.request, password=password)
+
+        
 class AccountLoginView(APIView):
     def post(self, request: Request) -> Response:
         serializer = LoginSerializer(data=request.data)

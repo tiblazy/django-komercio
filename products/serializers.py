@@ -13,7 +13,6 @@ class ProductDetailsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = '__all__'
-        extra_kwargs = {'quantity': {'validators': [MinValueValidator(0)]}}
 
 class ProductBasicSerializer(serializers.ModelSerializer):
     class Meta:

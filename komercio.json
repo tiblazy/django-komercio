@@ -1,0 +1,130 @@
+[
+  {
+    "model": "accounts.account",
+    "pk": "4183400d-e87c-43e8-ae7e-83b09b8e5cee",
+    "fields": {
+      "password": "pbkdf2_sha256$390000$sj8C3D5dsEeaHdt0SFro6V$ZFGSsUjgo8WAdYpCq7h7GVw+jmvmnZP7TRcyRVLUesM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "buyer_newest",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-10-19T13:16:10.004Z",
+      "first_name": "alexandre",
+      "last_name": "alves",
+      "is_seller": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": "6f96c87a-be3e-4667-87e0-ebd3fe9bc2c0",
+    "fields": {
+      "password": "pbkdf2_sha256$390000$K4AFcFJTwAdowm9wx6I6pB$xF0Mv1PE6cJSx7GhkzRXuLIpQZfIVounNXzKZ7YqPjc=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "seller_older",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-10-19T13:16:00.460Z",
+      "first_name": "alexandre",
+      "last_name": "alves",
+      "is_seller": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": "b07126fe-f85a-4a1e-83b1-15a2abf85d20",
+    "fields": {
+      "password": "pbkdf2_sha256$390000$AncpB5qeQcQJ6M9PqzmGS5$0mDWq4onUCld2/BbuSyYUTNggkA4mTQ1lRZUZyoZSM4=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "gohan",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-10-19T13:16:58.644Z",
+      "first_name": "gohan",
+      "last_name": "gohan",
+      "is_seller": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": "ce59f183-bcb6-45bb-8067-6148b34fd829",
+    "fields": {
+      "password": "pbkdf2_sha256$390000$fAgoU3Bo6xzoIyQ18VUIJg$5a/F1aWkDTNQJSDAAoDH+MlR5MZsCdtsnd+yMiQd4zY=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "buyer_newest2",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-10-19T13:16:07.801Z",
+      "first_name": "alexandre",
+      "last_name": "alves",
+      "is_seller": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": "f13519ae-e889-497c-bb79-3ed7c7499ad0",
+    "fields": {
+      "password": "pbkdf2_sha256$390000$H1njEJuOIYwurSSmx0KGC8$V1DQQ+5ITRaqjNGUR3w0L4ROsEY4CtMYHZJh7eqi3vM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "seller_newest",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-10-19T13:16:05.014Z",
+      "first_name": "alexandre",
+      "last_name": "alves",
+      "is_seller": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "3b01f701-0970-48d8-936d-b795358cb6f3",
+    "fields": {
+      "description": "Up Altas aveturas",
+      "price": "120.00",
+      "quantity": 12,
+      "is_active": true,
+      "seller": "6f96c87a-be3e-4667-87e0-ebd3fe9bc2c0"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "422e5adb-22d1-4014-9ef9-06e0ebf069db",
+    "fields": {
+      "description": "Up Altas aveturas seller 2",
+      "price": "120.00",
+      "quantity": 12,
+      "is_active": true,
+      "seller": "f13519ae-e889-497c-bb79-3ed7c7499ad0"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": "dbccfb9a-78c8-4bad-a7c3-b0821707fa90",
+    "fields": {
+      "description": "Up Altas aveturas to delete",
+      "price": "120.00",
+      "quantity": 12,
+      "is_active": true,
+      "seller": "6f96c87a-be3e-4667-87e0-ebd3fe9bc2c0"
+    }
+  }
+]
