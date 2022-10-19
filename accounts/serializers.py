@@ -7,8 +7,6 @@ class AccountSerializer(serializers.ModelSerializer):
         model = Account
         exclude = ['id', 'last_login', 'groups', 'user_permissions', 'email', 'is_staff',]
         extra_kwargs = {
-            'first_name': {'required': True,},
-            'last_name': {'required': True,},
             'is_seller': {'required': True,},
             'password': {'write_only': True,},
         }
