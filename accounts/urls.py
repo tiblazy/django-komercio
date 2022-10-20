@@ -8,6 +8,6 @@ from . import views
 urlpatterns = [
     path('', views.AccountView.as_view(), name='accounts'),
     path('newest/<int:num>/', views.AccountListView.as_view()),
-    path('<pk>/', views.AccountUpdateView.as_view()),
-    path('<pk>/management/', views.ManagerView.as_view()),
+    path('<pk>/', views.AccountUpdateView.as_view(), name='accounts_updated'),
+    path('<pk>/management/', views.ManagerView.as_view(), name='accounts_updated_admin'),
 ]

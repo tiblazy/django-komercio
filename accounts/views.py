@@ -37,7 +37,7 @@ class AccountUpdateView(UpdateAPIView):
         if 'password' in self.request.data.keys():
             password = hashers.make_password(self.request.data['password'])
 
-        return serializer.save(data=self.request, password=password)                
+        return serializer.save(data=self.request, password=password, is_active=True)                
 class ManagerView(UpdateAPIView):
     queryset = Account.objects.all()
     serializer_class = AccountSerializer

@@ -4,6 +4,8 @@ import os
 import dotenv
 import environ
 
+import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 env = environ.Env(
     DEBUG=(bool, False)
@@ -160,3 +162,12 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
 }
+
+#project_base/settings.py
+
+DATABASE_URL = os.environ.get('DATABASE_URL')
+
+if DATABASE_URL:
+    db_from_env = dj_database_url.config(
+        default=DATABASE_URL, conn_max_age=500, ssl_require=True)
+    DATABASES['default'].update(db_from_env)

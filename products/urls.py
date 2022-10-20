@@ -6,6 +6,6 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.ProductView.as_view()),
-    path('<pk>/', views.ProductRetrieveView.as_view()),
+    path('', views.ProductView.as_view(), name='products'),
+    path('<pk>/', views.ProductRetrieveView.as_view(), name='products_update'),
 ]
